@@ -1,0 +1,245 @@
+
+body{
+    margin-top: 59px;
+    background-color: #c0c0c0;
+    background: url("../img/IMG_001.JPG") repeat;
+}
+.pad-top-10 {padding-top: 10px;}
+.pad-top-20 {padding-top: 20px;}
+.pad-top-30 {padding-top: 30px;}
+
+.ng-invalid.ng-dirty {
+     border-color: red;
+ }
+
+.ng-valid.ng-dirty {
+    border-color: green;
+}
+
+.top-bar {
+    height: 5px;
+    background: #ac2925;
+    margin-bottom: 1px;
+}
+
+.carousel {
+    padding-bottom: 10px;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    /*height: 350px;*/
+    padding: 0px;
+}
+
+.jumbotron {
+    background: url("../img/IMG_0064.JPG") no-repeat 50% 0;
+    height: 350px;
+    padding: 0px;
+}
+
+.jumbotron [class*="col-"] {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    background-color: #eeeeee;
+    border: 1px solid #dddddd;
+    background-color: rgba(86,61,124,.15);
+    border: 1px solid rgba(86,61,124,.2);
+    overflow: auto;
+    height: 350px;
+}
+
+.jumbotron-content{
+    color: #ffffff;
+}
+
+.jumbotron h1 {
+    font-size: 34px;
+    border-bottom: #ffffff solid 1px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    margin-bottom: 1px;
+    background: url("../img/IMG_006.JPG") repeat;
+}
+
+.navbar li:hover {
+    background: #e7e7e7;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+li.login a{
+    background: #ca2129;
+    margin-bottom: -10px;
+    color: #ffffff !important;
+    padding-right: 22px;
+    padding-left: 22px;
+}
+
+li.login a:hover, .navbar-default .navbar-nav>li>a:hover{
+    background: #cccccc;
+
+}
+
+li.register a{
+    background: #2f98cc;
+    margin-bottom: -10px;
+    color: #ffffff !important;
+}
+
+li.register a:hover, .navbar-default .navbar-nav>li>a:hover{
+    background: #cccccc;
+
+}
+
+.bluebox {
+    background: #2e98cc;
+    overflow: hidden;
+    height: 230px;
+    color: #ffffff;
+    padding:0 10px;
+    font-size: 120%;
+}
+
+.bluebox a.readmore {
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+    background: #2b8cbc;
+    padding: 10px 15px;
+    color: #ffffff;
+}
+
+.bluebox a.readmore:hover {
+    color: #000;
+    background: #20749d;
+}
+
+.redbox {
+    background: #ca2129;
+    overflow: hidden;
+    height: 230px;
+    color: #ffffff;
+    padding:0 10px;
+    font-size: 120%;
+}
+
+.redbox a.readmore {
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+    background: #bf1e26;
+    padding: 10px 15px;
+    color: #ffffff;
+}
+
+.redbox a.readmore:hover {
+    color: #000;
+    background: #86161b;
+}
+
+.media {
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.media-body {
+    font-size: 120%;
+}
+
+.panel-blue-heading {
+    background: #2e98cc !important;
+    color: #ffffff !important;
+}
+
+.list-group-item{
+    border: dotted 1px #dddddd;
+    margin-bottom: 10px;
+}
+a.list-group-item.active, a.list-group-item.active:focus, a.list-group-item.active:hover {
+    background: #ca2129;
+    border: #ca2129;;
+}
+
+.gray-list a.list-group-item.active, .gray-list a.list-group-item.active:focus, .gray-list a.list-group-item.active:hover {
+    background: #f4f4f4;
+    border: #cccccc;
+    color: #666666;
+}
+
+#blog img{
+    width:100%;
+    margin:5px 0 15px 0;
+    border:1px #cccccc solid;
+    padding:3px;
+    border-radius:5px;
+}
+
+#blog a.readmore{
+    background:#2b8cbc;
+    padding:10px 15px;
+    color:#ffffff;
+    text-align:center;
+    display:block;
+    margin-top:20px !important;
+    border-radius:5px;
+}
+
+#blog a.readmore:hover{
+    background:#20749d;
+}
+
+small{
+    padding:5px;
+    background:#f4f4f4;
+    border:#dddddd solid 1px;
+    border-radius:10px;
+    width:100%;
+    display:block;
+    margin:5px 0 10px 0;
+}
+
+iframe.gmap{
+    width:100%;
+    border:#cccccc 1px solid;
+    border-radius:10px;
+    padding:4px;
+}
+
+.greywell{
+    background:#f4f4f4 !important;
+}
+
+#tooltip-1,#tooltip-2{
+    color:#ffffff;
+    border-bottom:dotted 1px #ffffff;
+    padding-bottom:2px;
+}
+
+#tooltip-1:hover,#tooltip-2:hover{
+    text-decoration: none;
+}
+
+.tab-pane{
+    padding-top:10px;
+}
+
+.tab-content>.active {
+    background-color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.thumbnail {
+    margin: 20px 0px;
+    border:none;
+}
+footer {
+    text-align: center;
+    padding: 20px 0;
+    font-weight: bold;
+    background: #f4f4f4;
+}

@@ -1,0 +1,32 @@
+{
+  "name": "member-list",
+  "version": "1.0.0",
+  "description": "Member List",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vijithaepa/Shaping-up-with-Angular.git"
+  },
+  "keywords": [
+    "angular",
+    "material"
+  ],
+  "author": "Vijitha Epa <vijithaepa@yahoo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vijithaepa/Shaping-up-with-Angular/issues"
+  },
+  "homepage": "https://github.com/vijithaepa/Shaping-up-with-Angular#readme",
+  "dependencies": {
+    "angular": "1.5.7",
+    "angular-animate": "1.5.7",
+    "angular-aria": "1.5.7",
+    "angular-material": "1.1.0-rc.5",
+    "angular-route": "1.5.7",
+    "bootstrap": "3.3.6",
+    "jquery": "3.1.0"
+  }
+}
