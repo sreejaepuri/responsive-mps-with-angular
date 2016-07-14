@@ -9,7 +9,6 @@ This codes were implemented following a [Shaping up with AngularJs](https://www.
   *  Services
 
 ## Contents :
-==========
 ```
   root_folder
   │   .gitignore
