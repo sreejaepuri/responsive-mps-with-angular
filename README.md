@@ -10,10 +10,11 @@ This codes were implemented following a [Shaping up with AngularJs](https://www.
 
 ## Contents :
 ==========
-  <root_folder></li>
+```
+  root_folder
   │   .gitignore
-  │   about-us.html
-  │   contact-us.html
+  │   about-us.html.
+  │   contact-us.html.
   │   event.html
   │   events.html
   │   GemStore.html
@@ -69,10 +70,12 @@ This codes were implemented following a [Shaping up with AngularJs](https://www.
   │       banner.js
   │       bootstrap.css
   │       jquery-2.2.4.min.js
-  │       product-directives.js  │       products.js
+  │       product-directives.js  
+  │       products.js
   │       store-products.js
   │
   └───node_modules
+```
 
 > * GemStore.html : root file for Angular JS functionality.
 > * index.html : root for bootstrap exercises.
