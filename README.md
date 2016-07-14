@@ -1,14 +1,14 @@
 This project contains the basic application of AngularJS and Tweeter Bootstrap. 
-This codes were implemented following a <a href="https://www.codeschool.com/courses/shaping-up-with-angular-js">Shaping up with AngularJs</a> course and <a href="https://www.udemy.com/learn-to-build-websites-using-twitter-bootstrap/learn/v4/content">Learn to Build Websites using Twitter Bootstrap</a>.
+This codes were implemented following a [Shaping up with AngularJs](https://www.codeschool.com/courses/shaping-up-with-angular-js) course and [Learn to Build Websites using Twitter Bootstrap](https://www.udemy.com/learn-to-build-websites-using-twitter-bootstrap/learn/v4/content).
 
-This discuss the Angular JS topics of
-  1 -  Data Binding
-  2 -  Built-in Directives
-  3 -  Forms
-  4 -  Custom Directives
-  5 -  Services
+## This discuss the Angular JS topics of
+  *  Data Binding
+  *  Built-in Directives
+  *  Forms
+  *  Custom Directives
+  *  Services
 
-Contents :
+## Contents :
 ==========
   <root_folder></li>
   │   .gitignore
@@ -74,5 +74,5 @@ Contents :
   │
   └───node_modules
 
-  GemStore.html : root file for Angular JS functionality.
-  index.html : root for bootstrap exercises.
+>  GemStore.html : root file for Angular JS functionality.
+>  index.html : root for bootstrap exercises.
