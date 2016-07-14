@@ -74,5 +74,5 @@ This codes were implemented following a [Shaping up with AngularJs](https://www.
   │
   └───node_modules
 
->  GemStore.html : root file for Angular JS functionality.
->  index.html : root for bootstrap exercises.
+> * GemStore.html : root file for Angular JS functionality.
+> * index.html : root for bootstrap exercises.
