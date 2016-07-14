@@ -30,18 +30,33 @@
             restriction: 'E',
             templateUrl: 'html/navigation-menu.html',
             controller: function () {
-                this.tab = 1;
+                this.nav_tab = 1;
 
                 this.isSet = function (checkTab) {
-                    return (this.tab === checkTab);
+                    return (this.nav_tab === checkTab);
                 };
 
                 this.setTab = function (setTab) {
-                    this.tab = setTab;
+                    this.nav_tab = setTab;
                 };
+
             },
-            controllerAs: 'tab'
+            controllerAs: 'nav_tab'
+        };
+    });
+
+    app.controller("aboutController", function(){
+        this.tab = 1;
+
+        this.isSet = function (checkTab) {
+            return (this.tab === checkTab);
+        };
+
+        this.setTab = function (setTab) {
+            console.log("Tab clicked");
+            this.tab = setTab;
         };
     });
 
 })();
+

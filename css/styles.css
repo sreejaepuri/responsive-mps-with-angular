@@ -1,4 +1,4 @@
-
+/*Common*/
 body{
     margin-top: 59px;
     background-color: #c0c0c0;
@@ -20,42 +20,6 @@ body{
     height: 5px;
     background: #ac2925;
     margin-bottom: 1px;
-}
-
-.carousel {
-    padding-bottom: 10px;
-}
-
-.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
-    /*height: 350px;*/
-    padding: 0px;
-}
-
-.jumbotron {
-    background: url("../img/IMG_0064.JPG") no-repeat 50% 0;
-    height: 350px;
-    padding: 0px;
-}
-
-.jumbotron [class*="col-"] {
-    padding-top: 15px;
-    padding-bottom: 10px;
-    background-color: #eeeeee;
-    border: 1px solid #dddddd;
-    background-color: rgba(86,61,124,.15);
-    border: 1px solid rgba(86,61,124,.2);
-    overflow: auto;
-    height: 350px;
-}
-
-.jumbotron-content{
-    color: #ffffff;
-}
-
-.jumbotron h1 {
-    font-size: 34px;
-    border-bottom: #ffffff solid 1px;
-    padding-bottom: 10px;
 }
 
 .navbar {
@@ -95,6 +59,46 @@ li.register a:hover, .navbar-default .navbar-nav>li>a:hover{
     background: #cccccc;
 
 }
+
+
+
+/*Home page*/
+.carousel {
+    padding-bottom: 10px;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    /*height: 350px;*/
+    padding: 0px;
+}
+
+.jumbotron {
+    background: url("../img/IMG_0064.JPG") no-repeat 50% 0;
+    height: 350px;
+    padding: 0px;
+}
+
+.jumbotron [class*="col-"] {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    background-color: #eeeeee;
+    border: 1px solid #dddddd;
+    background-color: rgba(86,61,124,.15);
+    border: 1px solid rgba(86,61,124,.2);
+    overflow: auto;
+    height: 350px;
+}
+
+.jumbotron-content{
+    color: #ffffff;
+}
+
+.jumbotron h1 {
+    font-size: 34px;
+    border-bottom: #ffffff solid 1px;
+    padding-bottom: 10px;
+}
+
 
 .bluebox {
     background: #2e98cc;
@@ -171,6 +175,12 @@ a.list-group-item.active, a.list-group-item.active:focus, a.list-group-item.acti
     color: #666666;
 }
 
+/*About Us*/
+.nav-pills>li{
+    background-color: #eeeeee;
+    width:25%;
+}
+
 #blog img{
     width:100%;
     margin:5px 0 15px 0;
@@ -214,13 +224,13 @@ iframe.gmap{
     background:#f4f4f4 !important;
 }
 
-#tooltip-1,#tooltip-2{
+#tooltip_1,#tooltip_2{
     color:#ffffff;
     border-bottom:dotted 1px #ffffff;
     padding-bottom:2px;
 }
 
-#tooltip-1:hover,#tooltip-2:hover{
+#tooltip_1:hover,#tooltip_2:hover{
     text-decoration: none;
 }
 
@@ -234,9 +244,13 @@ iframe.gmap{
 }
 
 .thumbnail {
-    margin: 20px 0px;
-    border:none;
+    margin: 5px 5px;
+    border-radius: 4%;
 }
+.thumbnail>img {
+    padding:5px;
+}
+
 footer {
     text-align: center;
     padding: 20px 0;

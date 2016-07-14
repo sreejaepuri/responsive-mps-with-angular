@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ng-controller="aboutController as tab">
     <div class="row pad-top-30">
         <!--Left contents-->
         <div class="inner-page col-md-8">
@@ -10,46 +10,16 @@
                 <!--<img src="img/sample/teamwork.jpg" alt="Teamwork" />-->
             </div>
 
-            <!--Mgr Members description-->
-            <div class="col-md-12">
-                <div class="panel panel-default">
-                    <div class="panel-heading panel-blue-heading">
-                        <h3 class="panel-title">What's happening in institution</h3>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6 col-md-6">
-                            <div class="thumbnail">
-                                <img src="img/thumbnail/IMG_0002_0.JPG" alt="Image one">
-                                <div class="caption">
-                                    <h3>Adrian Samaranayaka</h3>
-                                    <p>But I mustou a complete account of the system<a id="tooltip-5" data-toggle="tooltip" title="Some tooltip text!">...</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-6">
-                            <div class="thumbnail">
-                                <img src="img/thumbnail/IMG_0035.JPG" alt="Image one" >
-                                <div class="caption">
-                                    <h3>Adrian Samaranayaka</h3>
-                                    <p>But I mustou a complete account of the system<a id="tooltip-5" data-toggle="tooltip" title="Some tooltip text!">...</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-            </div><!-- /. col-md-8 -->
 
-            <!--Member details-->
-            <div>
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#aim" aria-controls="house01" role="tab" data-toggle="tab">House 01</a></li>
-                    <li role="presentation"><a href="#team" aria-controls="house02" role="tab" data-toggle="tab">House 02</a></li>
+            <!--Member details section-->
+            <ul class="nav nav-pills">
+                <li ng-class="{active:tab.isSet(1)}"><a href ng-click="tab.setTab(1)">House 01 members <span class="badge">3</span></a></li>
+                <li ng-class="{active:tab.isSet(2)}"><a href ng-click="tab.setTab(2)">House 02 member <span class="badge">1</span></a></li>
+            </ul>
 
-                </ul>
-
-                <!-- Tab panes -->
+            <!--Tab 01-->
+            <div class="panel" ng-show="tab.isSet(1)">
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="aim">
                         <div class="media">
@@ -86,57 +56,66 @@
                             </div>
                         </div>
                     </div>
-                    <div role="tabpanel" class="tab-pane" id="team">
-
-                    </div>
                 </div>
-
             </div>
 
-            <!--<div class="media">-->
-                <!--<div class="media-left">-->
-                    <!--<a href="#">-->
-                        <!--<img class="media-object img-circle" src="img/thumbnail/IMG_0035.JPG" alt="user 01">-->
-                    <!--</a>-->
-                <!--</div>-->
-                <!--<div class="media-body">-->
-                    <!--<h4 class="media-heading">User Name</h4>-->
-                    <!--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="media">-->
-                <!--<div class="media-left">-->
-                    <!--<a href="#">-->
-                        <!--<img class="media-object img-circle" src="img/thumbnail/IMG_0038.JPG" alt="user 01">-->
-                    <!--</a>-->
-                <!--</div>-->
-                <!--<div class="media-body">-->
-                    <!--<h4 class="media-heading">User Name</h4>-->
-                    <!--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="media">-->
-                <!--<div class="media-left">-->
-                    <!--<a href="#">-->
-                        <!--<img class="media-object img-circle" src="img/thumbnail/IMG_0072.JPG" alt="user 01">-->
-                    <!--</a>-->
-                <!--</div>-->
-                <!--<div class="media-body">-->
-                    <!--<h4 class="media-heading">User Name</h4>-->
-                    <!--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>-->
-                <!--</div>-->
-            <!--</div>-->
+            <!--Tab 02-->
+            <div class="panel" ng-show="tab.isSet(2)">
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="aim">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object img-circle" src="img/thumbnail/birdy3_0.jpg" alt="user 01">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">User Name</h4>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
         <!-- Sidebar -->
         <div class="col-md-4">
-            <div class="well greywell">
+            <!--Mgr Members description-->
+            <div class="panel panel-default">
+                <div class="panel-heading panel-blue-heading">
+                    <h3 class="panel-title">Admin team</h3>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-12">
+                        <div class="thumbnail">
+                            <img src="img/thumbnail/IMG_0002_0.JPG" alt="Image one">
+                            <div class="caption">
+                                <h4>Adrian Samaranayaka</h4>
+                                <p>But I mustou a complete account of the system<a id="tooltip-5" data-toggle="tooltip" title="Some tooltip text!">...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col-sm-6 col-md-12">
+                        <div class="thumbnail">
+                            <img src="img/thumbnail/IMG_0035.JPG" alt="Image one" >
+                            <div class="caption">
+                                <h3>Adrian Samaranayaka</h3>
+                                <p>But I mustou a complete account of the system<a id="tooltip-5" data-toggle="tooltip" title="Some tooltip text!">...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--&lt;!&ndash; /. col-md-8 &ndash;&gt;-->
+
+            <div class="well">
                 <h3>Quick Contact</h3>
                 <form role="form">
                     <div class="form-group">
                         <label for="exampleInputName">Name</label>
-                        <input type="email" class="form-control" id="exampleInputName" placeholder="Enter email">
+                        <input type="email" class="form-control" id="exampleInputName" placeholder="Enter full name">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
@@ -150,28 +129,6 @@
                     <button type="submit" class="btn btn-default">Send</button>
                 </form>
             </div>
-
-            <!--Tab space-->
-            <!--<div>-->
-                <!--&lt;!&ndash; Nav tabs &ndash;&gt;-->
-                <!--<ul class="nav nav-tabs" role="tablist">-->
-                    <!--<li role="presentation" class="active"><a href="#aim" aria-controls="aim" role="tab" data-toggle="tab">Aim</a></li>-->
-                    <!--<li role="presentation"><a href="#team" aria-controls="team" role="tab" data-toggle="tab">Team</a></li>-->
-                    <!--<li role="presentation"><a href="#success" aria-controls="success" role="tab" data-toggle="tab">Success</a></li>-->
-                    <!--<li role="presentation"><a href="#plans" aria-controls="plans" role="tab" data-toggle="tab">Plans</a></li>-->
-                <!--</ul>-->
-
-                <!--&lt;!&ndash; Tab panes &ndash;&gt;-->
-                <!--<div class="tab-content">-->
-                    <!--<div role="tabpanel" class="tab-pane active" id="aim">-->
-
-                    <!--</div>-->
-                    <!--<div role="tabpanel" class="tab-pane" id="team"><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p></div>-->
-                    <!--<div role="tabpanel" class="tab-pane" id="success"><p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p></div>-->
-                    <!--<div role="tabpanel" class="tab-pane" id="plans"><p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p></div>-->
-                <!--</div>-->
-
-            <!--</div>-->
 
         </div><!-- /. col-md-4 -->
     </div> <!-- /row -->

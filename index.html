@@ -11,6 +11,8 @@
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 
+
+
 </head>
 
 <body ng-app="mps-app">
@@ -25,7 +27,7 @@
 </footer>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<!--<script src="node_modules/jquery/dist/jquery.min.js"></script>-->
 <script src="js/jquery-2.2.4.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -33,29 +35,8 @@
 <script src="node_modules/angular/angular.min.js"></script>
 <script src="node_modules/angular-route/angular-route.min.js"></script>
 <script src="js/mps-app.js"></script>
-<!--<script src="node_modules/bootstrap/js/tooltip.js"></script>-->
-<!--<script src="node_modules/bootstrap/js/popover.js"></script>-->
 
 
-<script >
-    $(document).ready(function(){
-        $('#tooltip-1').tooltip('hide')
-        $('#tooltip-2').tooltip('hide')
-
-        var myEl = document.getElementById('firstBtn');
-
-        myEl.addEventListener('click', function() {
-            alert('Hello world');
-        }, true);
-
-
-        $('[data-toggle="popover"]').popover({
-            placement : 'top'
-        });
-
-    });
-
-</script>
 </body>
 
 </html>
