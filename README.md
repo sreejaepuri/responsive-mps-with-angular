@@ -13,8 +13,8 @@ This codes were implemented following a [Shaping up with AngularJs](https://www.
 ```
   root_folder
   │   .gitignore
-  │   about-us.html.
-  │   contact-us.html.
+  │   about-us.html
+  │   contact-us.html
   │   event.html
   │   events.html
   │   GemStore.html
@@ -77,5 +77,6 @@ This codes were implemented following a [Shaping up with AngularJs](https://www.
   └───node_modules
 ```
 
+## Contents Description 
 > * GemStore.html : root file for Angular JS functionality.
 > * index.html : root for bootstrap exercises.
