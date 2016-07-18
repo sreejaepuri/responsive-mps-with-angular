@@ -12,13 +12,13 @@
                 templateUrl: "html/mps-home.html"
             })
             .when("/about-us", {
-                templateUrl: "about-us.html"
+                templateUrl: "html/about-us.html"
             })
             .when("/contact-us", {
-                templateUrl: "contact-us.html"
+                templateUrl: "html/contact-us.html"
             })
             .when("/events", {
-                templateUrl: "events.html"
+                templateUrl: "html/events.html"
             })
             .otherwise({
                 redirectTo: "/index.html"
