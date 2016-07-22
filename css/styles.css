@@ -2,13 +2,17 @@
 body{
     margin-top: 59px;
     background-color: #c0c0c0;
-    background: url("../img/IMG_001.JPG") repeat;
+    background: url("../img/IMG_001.jpg") repeat;
 }
+
+.pad-top-6 {padding-top: 6px;}
 .pad-top-10 {padding-top: 10px;}
 .pad-top-20 {padding-top: 20px;}
 .pad-top-30 {padding-top: 30px;}
-
 .pad-bottom-30 {padding-bottom: 30px;}
+.pad-10 {padding: 10px;}
+
+/*.md-datepicker-button { width: 36px; }*/
 
 .ng-invalid.ng-dirty {
     border-color: red;
@@ -48,7 +52,6 @@ li.login a{
 
 li.login a:hover, .navbar-default .navbar-nav>li>a:hover{
     background: #cccccc;
-
 }
 
 li.register a{
@@ -61,7 +64,6 @@ li.register a:hover, .navbar-default .navbar-nav>li>a:hover{
     background: #cccccc;
 
 }
-
 
 
 /*Home page*/
@@ -162,10 +164,6 @@ li.register a:hover, .navbar-default .navbar-nav>li>a:hover{
     color: #ffffff !important;
 }
 
-.list-group-item{
-    border: dotted 1px #dddddd;
-    margin-bottom: 10px;
-}
 a.list-group-item.active, a.list-group-item.active:focus, a.list-group-item.active:hover {
     background: #ca2129;
     border: #ca2129;;

@@ -1,0 +1,128 @@
+<div class="container" ng-controller="eventsController as ctrl">
+    <div class="row pad-top-30">
+
+        <!--Top events-->
+        <div class="inner-page col-md-8">
+            <div id="blog" class="well">
+                <h3>Why You Should Use Twitter Bootstrap</h3>
+                <small>Posted on <strong>November 14, 2013</strong> by <strong>Brad Traversy</strong></small>
+                <img src="img/banner/bn-2.JPG" alt="check"/>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cauctor magna lobortis quis. Vestibulum
+                    tincidunt volutpat nisi tellus sit amet ullamcorper mollis, arcu est dignissim odio, quis fringilla
+                    mauris lacus sit amet sapien. In posuere ac erat non sollicitudin. Maecenas ante nibh, imperdiet a
+                    nisl quis, semper rhoncus nisl. Phasellus porta adipiscing risus, sed pellentesque elit eleifend
+                    sed. Fusce scelerisque cursus sapien. Nullam feugiat sollicitudin diam, id tincidunt sem eleifend
+                    at. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In
+                    aliquet scelerisque lectus nec imperdiet.</p>
+                <a class="readmore" href="#">Read More</a>
+                <hr>
+                <h3>What Social Networks Should You Be On?</h3>
+                <small>Posted on <strong>November 14, 2013</strong> by <strong>Brad Traversy</strong></small>
+                <img src="img/banner/bn-3.JPG" alt="check"/>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cauctor magna lobortis quis. Vestibulum
+                    tincidunt volutpat nisi tellus sit amet ullamcorper mollis, arcu est dignissim odio, quis fringilla
+                    mauris lacus sit amet sapien. In posuere ac erat non sollicitudin. Maecenas ante nibh, imperdiet a
+                    nisl quis, semper rhoncus nisl. Phasellus porta adipiscing risus, sed pellentesque elit eleifend
+                    sed. Fusce scelerisque cursus sapien. Nullam feugiat sollicitudin diam, id tincidunt sem eleifend
+                    at. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In
+                    aliquet scelerisque lectus nec imperdiet.</p>
+                <a class="readmore" href="#">Read More</a>
+                <hr>
+                <h3>Teamwork and Web Development?</h3>
+                <small>Posted on <strong>November 14, 2013</strong> by <strong>Brad Traversy</strong></small>
+                <img src="img/IMG_0072.jpg" alt="check"/>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cauctor magna lobortis quis. Vestibulum
+                    tincidunt volutpat nisi tellus sit amet ullamcorper mollis, arcu est dignissim odio, quis fringilla
+                    mauris lacus sit amet sapien. In posuere ac erat non sollicitudin. Maecenas ante nibh, imperdiet a
+                    nisl quis, semper rhoncus nisl. Phasellus porta adipiscing risus, sed pellentesque elit eleifend
+                    sed. Fusce scelerisque cursus sapien. Nullam feugiat sollicitudin diam, id tincidunt sem eleifend
+                    at. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In
+                    aliquet scelerisque lectus nec imperdiet.</p>
+                <a class="readmore" href="#">Read More</a>
+            </div>
+        </div><!-- /. col-md-8 -->
+
+        <!-- Sidebar -->
+        <div class="col-md-4">
+            <!--New event form-->
+            <div class="panel panel-default">
+                <div class="panel-heading panel-blue-heading">
+                    <h3 class="panel-title">Panel title</h3>
+                </div>
+                <div class="panel-body">
+                    <md-content layout-padding="">
+                        <div>
+                            <form name="eventForm">
+
+                                <div layout-gt-md="row" class="md-block">
+                                    <md-datepicker ng-model="event.date" md-placeholder="Event date" md-min-date="minDate" md-max-date="maxDate" class="pad-top-6"></md-datepicker>
+                                    <md-input-container flex>
+                                        <label>Time</label>
+                                        <md-select ng-model="event.time">
+                                            <md-option ng-repeat="section in sectionOfTheDay" value="{{section}}">
+                                                {{section}}
+                                            </md-option>
+                                        </md-select>
+                                    </md-input-container>
+                                </div>
+
+                                <md-input-container class="md-block">
+                                    <label>Title</label>
+                                    <input ng-model="event.title">
+                                </md-input-container>
+                                <div layout-gt-sm="row">
+                                    <md-input-container class="md-block" flex-gt-sm="">
+                                        <label>First name</label>
+                                        <input ng-model="event.firstName">
+                                    </md-input-container>
+
+                                    <md-input-container class="md-block" flex-gt-sm="">
+                                        <label>Last Name</label>
+                                        <input ng-model="event.lastName">
+                                    </md-input-container>
+                                </div>
+                                <div layout-gt-sm="row">
+                                    <md-input-container class="md-block" flex-gt-sm="">
+                                        <label>Event Code</label>
+                                        <input name="eventCode" ng-model="event.code" placeholder="12345" required="" ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
+
+                                        <div ng-messages="eventForm.eventCode.$error" role="alert" multiple="">
+                                            <div ng-message="required" class="my-message">You must supply a event code.</div>
+                                            <div ng-message="pattern" class="my-message">That doesn't look like a valid event code.</div>
+                                            <div ng-message="md-maxlength" class="my-message">Don't use the long version silly...we don't need to be that specific...</div>
+                                        </div>
+                                    </md-input-container>
+                                </div>
+                                <md-input-container class="md-block">
+                                    <label>Description</label>
+                                    <textarea ng-model="event.description" md-maxlength="150" rows="5" md-select-on-focus=""></textarea>
+                                </md-input-container>
+
+
+                                <input id="fileInput" type="file" ng-model="event.uploadimage">
+
+                                <md-button class="md-raised" ng-click="ctrl.upload()" aria-label="Upload">
+                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                </md-button>
+
+                            </form>
+                            <section>
+                                <ul class="list-group">
+                                    <li class="list-group-item" ng-repeat="img in event.images">{{img}} <a ng-click="ctrl.remove('ddddd')" class="pull-right"><span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span></a></li>
+
+                                </ul>
+                            </section>
+
+                            <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+                                <md-button class="md-raised">Clear</md-button>
+                                <!--<button class="md-button" type="submit">Clear</button>-->
+                                <md-button class="md-raised">Save</md-button>
+                            </section>
+                        </div>
+                    </md-content>
+                </div>
+            </div>
+
+        </div><!-- /. col-md-4 -->
+    </div> <!-- /row -->
+</div> <!-- /container -->

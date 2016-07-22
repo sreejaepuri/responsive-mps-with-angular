@@ -89,6 +89,27 @@
                 </div>
             </div>
 
+            <div layout="column" flex layout-fill ng-cloak>
+                <md-toolbar md-scroll-shrink>
+                    <div class="md-toolbar-tools panel-blue-heading">Event List</div>
+                </md-toolbar>
+                <md-content md-theme="altTheme" style="height: 400px;">
+                    <section ng-repeat="ev in eventsList">
+                        <md-subheader class="md-primary"> on {{ev.date}}</md-subheader>
+                        <md-list layout-padding>
+                            <md-list-item class="md-3-line">
+                                <img ng-src="{{ev.images[0]}}" class="md-avatar" alt="{{ev.images[0]}}">
+                                <div class="md-list-item-text">
+                                    <h4>{{ev.title}}</h4>
+                                    <p>
+                                        {{ev.description}}
+                                    </p>
+                                </div>
+                            </md-list-item>
+                        </md-list>
+                    </section>
+                </md-content>
+            </div>
         </div><!-- /. col-md-4 -->
     </div> <!-- /row -->
 </div> <!-- /container -->
