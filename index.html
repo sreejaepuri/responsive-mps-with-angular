@@ -22,10 +22,37 @@
 <!--Top Navigation-->
 <navigation-menu></navigation-menu>
 
-<div ng-view></div>
+<div ng-view class="contents"></div>
 
 <footer>
-    Copyright $copy; 2016, Maa Piya Sevana
+    <div class="container">
+        <div class="row">
+            <div id="footermenu" class="col-md-8">
+                <md-button class="md-icon-button"">
+                    <md-icon md-svg-src="img/svg/facebook.svg" aria-label="facebook"></md-icon>
+                </md-button>
+                <md-button class="md-icon-button">
+                    <md-icon md-svg-src="img/svg/twitter.svg" aria-label="twitter"></md-icon>
+                </md-button>
+                <md-button class="md-icon-button">
+                    <md-icon md-svg-icon="img/svg/instagram.svg" aria-label="instagram"></md-icon>
+                </md-button>
+                <md-button class="md-icon-button">
+                    <md-icon md-svg-icon="img/svg/youtube.svg" aria-label="youtube"></md-icon>
+                </md-button>
+                <md-button class="md-icon-button">
+                    <md-icon md-svg-icon="img/svg/google-plus.svg" aria-label="google-plus"></md-icon>
+                </md-button>
+                <md-button class="md-icon-button">
+                    <md-icon md-svg-icon="img/svg/plurk.svg" aria-label="plark"></md-icon>
+                </md-button>
+            </div>
+            <div id="copyright" class="col-md-4">
+                <p class="pull-right">Copyright $copy; 2016, Maa Piya Sevana</p>
+            </div>
+            </div>
+        </div>
+
 </footer>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

@@ -42,7 +42,24 @@
 
         <!-- Sidebar -->
         <div class="col-md-4">
-            <ul class="nav nav-pills nav-justified">
+            <div class="panel panel-default">
+                <div class="panel-heading panel-blue-heading">
+                    <h3 class="panel-title">Reports Menu</h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked pad-bottom-30">
+                        <li><a href="#">Members</a></li>
+                        <li><a href="#">Codes</a></li>
+                        <li><a href="#">Users</a></li>
+                        <li class="active"><a href="#">Events</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Activities</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <ul class="nav nav-pills nav-justified panel-blue-heading">
                 <li role="presentation" ng-class="{active:ctrl.isSet(1)}"><a href ng-click="ctrl.setTab(1)">by Text</a>
                 </li>
                 <li role="presentation" ng-class="{active:ctrl.isSet(2)}"><a href ng-click="ctrl.setTab(2)">by Date</a>

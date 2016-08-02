@@ -1,0 +1,185 @@
+<div id="report-event" class="container" ng-controller="eventsController as ctrl">
+    <div class="row pad-top-30">
+        <!-- Sidebar menu-->
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading panel-blue-heading">
+                    <h3 class="panel-title">Reports Menu</h3>
+                </div>
+                <!--<div class="panel-body">-->
+                <div class="list-group">
+                    <a href="#" class="list-group-item">Members</a>
+                    <a href="#" class="list-group-item">Codes</a>
+                    <a href="#" class="list-group-item">Users</a>
+                    <a href="#report-events" class="list-group-item active">Events</a>
+                    <a href="#" class="list-group-item">News</a>
+                    <a href="#" class="list-group-item">Activities</a>
+                </div>
+                <!--</div>-->
+
+            </div>
+            <div>
+                <a class="newItem color-light-red" href data-toggle="modal" data-target="#eventModel">New Event</a>
+                <!--<li class="login" data-toggle="modal" data-target="#loginModal"><a href>Login</a></li>-->
+            </div>
+        </div><!-- Sidebar menu-->
+
+        <div class="inner-page col-md-9">
+            <ul class="nav nav-pills nav-justified panel-blue-heading">
+                <li role="presentation" ng-class="{active:ctrl.isSet(1)}"><a href ng-click="ctrl.setTab(1)">by Text</a>
+                </li>
+                <li role="presentation" ng-class="{active:ctrl.isSet(2)}"><a href ng-click="ctrl.setTab(2)">by Date</a>
+                </li>
+            </ul>
+
+            <!--Search by Text-->
+            <div class="panel panel-default" ng-show="ctrl.isSet(1)">
+                <div class="panel-body">
+                    <form>
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <section class="pad-bottom-30">
+                                <label>Full or part of the event title</label>
+                                <input ng-model="event.searchText">
+                            </section>
+                            <section>
+                                <div flex-xs class="pad-top-30">
+                                    <!--<md-switch ng-model="event.searchExact">Search {{event.searchExact ? "Exact" : "part of the"}} text</md-switch>-->
+                                    <md-checkbox ng-model="event.searchExact" aria-label="Checkbox 1">
+                                        Search {{event.searchExact ? "Exact" : "part of the"}} text
+                                    </md-checkbox>
+                                </div>
+                            </section>
+                            <!--<button type="submit" class="btn btn-block">Clear</button>-->
+                            <button type="submit" class="btn btn-block btn-primary">Search</button>
+                        </md-input-container>
+                    </form>
+                </div>
+            </div><!--Search by Text-->
+
+            <!--Search by Dates-->
+            <div class="panel panel-default" ng-show="ctrl.isSet(2)">
+                <div class="panel-body">
+                    <form name="myForm">
+                        <div class="form-group">
+                            <md-datepicker id="eventFromDate" ng-model="eventFromDate" md-placeholder="Enter from date"
+                                           md-min-date="minDate" md-max-date="maxDate"></md-datepicker>
+                        </div>
+
+                        <div class="form-group">
+                            <md-datepicker id="eventToDate" ng-model="eventToDate" md-placeholder="Enter to date"
+                                           md-min-date="minDate" md-max-date="maxDate"></md-datepicker>
+                        </div>
+
+                        <button type="submit" class="btn btn-block btn-primary">Search</button>
+                    </form>
+
+                </div>
+            </div><!--Search by Dates-->
+
+            <!--Results set-->
+            <div id="events-list" layout="column" flex layout-fill ng-cloak class="pad-bottom-10">
+                <md-content md-theme="altTheme" style="max-height: 600px;">
+                    <section ng-repeat="ev in eventsList">
+                        <md-subheader class="md-primary">{{ev.date}}</md-subheader>
+                        <md-list layout-padding>
+                            <md-list-item class="md-3-line">
+                                <img ng-src="img/thumbnail/birdy3_0.jpg" class="thumbnail" >
+
+                                <div class="md-list-item-text">
+                                    <h4>{{ev.title}} posted by  XXXXX<a href="#"><span class="glyphicon glyphicon-remove pull-right" aria-hidden="true" title="Delete"></span></a><a href="#"><span class="glyphicon glyphicon-edit pull-right" aria-hidden="true" title="Edit"></span></a></h4>
+
+                                    <p>
+                                        {{ev.description}}
+                                    </p>
+                                    <a class="readmore" href="#">Read More</a>
+                                </div>
+                            </md-list-item>
+                        </md-list>
+                        <!--<hr>-->
+                    </section>
+                </md-content>
+            </div><!--Results set-->
+        </div><!-- /. col-md-8 -->
+
+        <!--New event form-->
+        <div class="modal fade" id="eventModel" tabindex="-1" role="dialog" aria-labelledby="eventModelLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="loginModalLabel">New Event</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form name="eventForm" onsubmit="">
+                                <div layout-gt-md="row" class="md-block">
+                                    <md-datepicker ng-model="event.date" md-placeholder="Event date" md-min-date="minDate" md-max-date="maxDate" class="pad-top-6"></md-datepicker>
+                                    <md-input-container flex>
+                                        <label>Time</label>
+                                        <md-select ng-model="event.time">
+                                            <md-option ng-repeat="section in sectionOfTheDay" value="{{section}}">
+                                                {{section}}
+                                            </md-option>
+                                        </md-select>
+                                    </md-input-container>
+                                </div>
+
+                                <md-input-container class="md-block">
+                                    <label>Title</label>
+                                    <input ng-model="event.title">
+                                </md-input-container>
+                                <div layout-gt-sm="row">
+                                    <md-input-container class="md-block" flex-gt-sm="">
+                                        <label>First name</label>
+                                        <input ng-model="event.firstName">
+                                    </md-input-container>
+
+                                    <md-input-container class="md-block" flex-gt-sm="">
+                                        <label>Last Name</label>
+                                        <input ng-model="event.lastName">
+                                    </md-input-container>
+                                </div>
+                                <div layout-gt-sm="row">
+                                    <md-input-container class="md-block" flex-gt-sm="">
+                                        <label>Event Code</label>
+                                        <input name="eventCode" ng-model="event.code" placeholder="12345" required="" ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
+
+                                        <div ng-messages="eventForm.eventCode.$error" role="alert" multiple="">
+                                            <div ng-message="required" class="my-message">You must supply a event code.</div>
+                                            <div ng-message="pattern" class="my-message">That doesn't look like a valid event code.</div>
+                                            <div ng-message="md-maxlength" class="my-message">Don't use the long version silly...we don't need to be that specific...</div>
+                                        </div>
+                                    </md-input-container>
+                                </div>
+                                <md-input-container class="md-block">
+                                    <label>Description</label>
+                                    <textarea ng-model="event.description" md-maxlength="150" rows="5" md-select-on-focus=""></textarea>
+                                </md-input-container>
+
+
+                                <input id="fileInput" class="btn btn-default" type="file" ng-model="event.uploadImage">
+
+                                <md-button class="md-raised" ng-click="ctrl.upload()" aria-label="Upload">
+                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                </md-button>
+
+                            </form>
+                            <section>
+                                <ul class="list-group">
+                                    <li class="list-group-item" ng-repeat="img in event.images">{{img}} <a ng-click="ctrl.remove('ddddd')" class="pull-right"><span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span></a></li>
+
+                                </ul>
+                            </section>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <md-button class="md-raised" data-dismiss="modal">Close</md-button>
+                        <md-button class="md-raised">Submit</md-button>
+                        <!--<button type="button" class="btn btn-default md-raised" data-dismiss="modal">Close</button>-->
+                        <!--<button type="submit" class="btn btn-default">Sign in</button>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- /row -->
+</div> <!-- /container -->

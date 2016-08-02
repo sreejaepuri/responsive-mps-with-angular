@@ -1,16 +1,32 @@
 /*Common*/
-body{
+.contents {
     margin-top: 59px;
-    background-color: #c0c0c0;
     background: url("../img/IMG_001.jpg") repeat;
 }
-
 .pad-top-6 {padding-top: 6px;}
 .pad-top-10 {padding-top: 10px;}
 .pad-top-20 {padding-top: 20px;}
 .pad-top-30 {padding-top: 30px;}
+.pad-bottom-10 {padding-bottom: 10px;}
+.pad-bottom-20 {padding-bottom: 20px;}
 .pad-bottom-30 {padding-bottom: 30px;}
 .pad-10 {padding: 10px;}
+
+.color-default {background: #313131;}
+.color-primary {background: #33747a;}
+.color-red {background: #8b2626;}
+.color-blue {background: #43668c;}
+.color-light-green {background: #649f2b;}
+.color-green {background: #506D2F;}
+
+.color-blue-1 {background: #2f98cc;}
+.color-blue-2 {background: #2b8cbc;}
+.color-blue-3 {background: #20749d;}
+.color-light-red {background: #ca2129;}
+
+.navy-blue {background: #2f98cc;}
+.navy-blue {background: #2f98cc;}
+.navy-blue {background: #2f98cc;}
 
 /*.md-datepicker-button { width: 36px; }*/
 
@@ -24,13 +40,14 @@ body{
 
 .top-bar {
     height: 5px;
-    background: #ac2925;
+    background: #8b2626;
     margin-bottom: 1px;
 }
 
 .navbar {
     margin-bottom: 1px;
-    background: url("../img/IMG_006.JPG") repeat;
+    background-color: #2A2922;
+    /*background: url("../img/IMG_004.JPG");*/
 }
 
 .navbar li:hover {
@@ -55,7 +72,7 @@ li.login a:hover, .navbar-default .navbar-nav>li>a:hover{
 }
 
 li.register a{
-    background: #2f98cc;
+    background: #20749d;
     margin-bottom: -10px;
     color: #ffffff !important;
 }
@@ -105,7 +122,7 @@ li.register a:hover, .navbar-default .navbar-nav>li>a:hover{
 
 
 .bluebox {
-    background: #2e98cc;
+    background: #2f98cc;
     overflow: hidden;
     height: 230px;
     color: #ffffff;
@@ -117,7 +134,7 @@ li.register a:hover, .navbar-default .navbar-nav>li>a:hover{
     position: absolute;
     bottom: 15px;
     left: 30px;
-    background: #2b8cbc;
+    background: #2f98cc;
     padding: 10px 15px;
     color: #ffffff;
 }
@@ -160,12 +177,12 @@ li.register a:hover, .navbar-default .navbar-nav>li>a:hover{
 }
 
 .panel-blue-heading {
-    background: #2e98cc !important;
+    background: #20749d !important;
     color: #ffffff !important;
 }
 
 a.list-group-item.active, a.list-group-item.active:focus, a.list-group-item.active:hover {
-    background: #ca2129;
+    background: #20749d;
     border: #ca2129;;
 }
 
@@ -177,9 +194,10 @@ a.list-group-item.active, a.list-group-item.active:focus, a.list-group-item.acti
 
 /*About Us*/
 .nav-pills>li{
-    background-color: #dddddd;
-    border: 1px solid #cccccc;
-    border-radius: 5%;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    font-weight: bolder;
+    /*border-radius: 5%;*/
 }
 
 #blog img{
@@ -188,6 +206,19 @@ a.list-group-item.active, a.list-group-item.active:focus, a.list-group-item.acti
     border:1px #cccccc solid;
     padding:3px;
     border-radius:5px;
+}
+#report-event a.newItem{
+    /*background:#8b2626;*/
+    padding:10px 15px;
+    color:#ffffff;
+    text-align:center;
+    display:block;
+    margin-top:20px !important;
+    border-radius:5px;
+}
+
+#events-list span.glyphicon{
+    padding: 0 5px;
 }
 
 #blog a.readmore{
@@ -201,7 +232,7 @@ a.list-group-item.active, a.list-group-item.active:focus, a.list-group-item.acti
 }
 
 #blog a.readmore:hover{
-    background:#20749d;
+    background:#2b8cbc;
 }
 
 small{
@@ -253,8 +284,15 @@ iframe.gmap{
 }
 
 footer {
-    text-align: center;
+    /*text-align: center;*/
     padding: 20px 0;
     font-weight: bold;
-    background: #f4f4f4;
+    color: #f2f6f3;
+    background: #2A2922;
+    /*background: url("../img/IMG_006.JPG") repeat;*/
 }
+
+footer.media-links {
+    /*padding-right: 50px;*/
+}
+

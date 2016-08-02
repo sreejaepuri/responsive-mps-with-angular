@@ -25,6 +25,9 @@
             .when("/event", {
                 templateUrl: "html/event.html"
             })
+            .when("/report-events", {
+                templateUrl: "html/report-events.html"
+            })
             .otherwise({
                 redirectTo: "/index.html"
             });

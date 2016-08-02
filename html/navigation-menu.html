@@ -20,23 +20,19 @@
                 <li ng-class="{active:nav_tab.isSet(1)}"><a href="#home" ng-click="nav_tab.setTab(1)">Home</a></li>
                 <li ng-class="{active:nav_tab.isSet(2)}"><a href="#about-us" ng-click="nav_tab.setTab(2)">About Us</a></li>
                 <li ng-class="{active:nav_tab.isSet(3)}"><a href="#contact-us" ng-click="nav_tab.setTab(3)">Contact Us</a></li>
-                <li class="dropdown" ng-class="{active:nav_tab.isSet(4)}">
-                    <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" ng-click="nav_tab.setTab(4)">Report<span class="caret"></span></a>
+                <li ng-class="{active:nav_tab.isSet(4)}"><a href="#events" ng-click="nav_tab.setTab(4)">Events</a></li>
+                <li class="dropdown" ng-class="{active:nav_tab.isSet(5)}">
+                    <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" ng-click="nav_tab.setTab(5)">Reports<span class="caret"></span></a>
                     <ul class="dropdown-menu ">
-                        <!--<li ng-class="{active:nav_tab.isSet(5)}"><a href="#events" ng-click="nav_tab.setTab(4)">Events</a></li>-->
-                        <li ng-class="{active:nav_tab.isSet(6)}" class="disabled"><a ng-click="nav_tab.setTab(4)">Users</a></li>
+                        <li ng-class="{active:nav_tab.isSet(51)}"><a ng-click="nav_tab.setTab(51)">Members</a></li>
+                        <li ng-class="{active:nav_tab.isSet(52)}"><a ng-click="nav_tab.setTab(52)">Codes</a></li>
+                        <li ng-class="{active:nav_tab.isSet(53)}"><a ng-click="nav_tab.setTab(53)">Users</a></li>
                         <li role="separator" class="divider"></li>
-                        <li ng-class="{active:nav_tab.isSet(7)}" class="disabled"><a ng-click="nav_tab.setTab(4)">Donor Codes</a></li>
+                        <li ng-class="{active:nav_tab.isSet(54)}"><a href="#report-events" ng-click="nav_tab.setTab(54)">Events</a></li>
+                        <li ng-class="{active:nav_tab.isSet(55)}"><a ng-click="nav_tab.setTab(55)">News</a></li>
+                        <li ng-class="{active:nav_tab.isSet(56)}"><a ng-click="nav_tab.setTab(56)">Activities</a></li>
                     </ul>
                 </li>
-                <li class="dropdown" ng-class="{active:nav_tab.isSet(8)}">
-                    <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" ng-click="nav_tab.setTab(8)">Events<span class="caret"></span></a>
-                    <ul class="dropdown-menu ">
-                        <li ng-class="{active:nav_tab.isSet(9)}"><a href="#events" ng-click="nav_tab.setTab(8)">Events</a></li>
-                        <li ng-class="{active:nav_tab.isSet(10)}"><a href="#event" ng-click="nav_tab.setTab(8)">New Event</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Upload Codes</a></li>
             </ul>
             <!-- Right side of navbar -->
             <ul class="nav navbar-nav navbar-right">
