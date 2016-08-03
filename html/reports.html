@@ -1,0 +1,40 @@
+<div id="report-event" class="container" ng-controller="reportController as ctrl">
+    <div class="row pad-top-30">
+        <!-- Sidebar menu-->
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading panel-blue-heading">
+                    <h3 class="panel-title">Reports Menu</h3>
+                </div>
+                <!--<div class="panel-body">-->
+                <div class="list-group">
+                    <a href class="list-group-item" ng-class="{active:ctrl.isMenuSet(1)}" ng-click="ctrl.setMenuTab(1)">Members</a>
+                    <a href class="list-group-item" ng-class="{active:ctrl.isMenuSet(2)}" ng-click="ctrl.setMenuTab(2)">Codes</a>
+                    <a href class="list-group-item" ng-class="{active:ctrl.isMenuSet(3)}" ng-click="ctrl.setMenuTab(3)">Users</a>
+                    <a href class="list-group-item" ng-class="{active:ctrl.isMenuSet(4)}" ng-click="ctrl.setMenuTab(4)">Events</a>
+                    <a href class="list-group-item" ng-class="{active:ctrl.isMenuSet(5)}" ng-click="ctrl.setMenuTab(5)">News</a>
+                    <a href class="list-group-item" ng-class="{active:ctrl.isMenuSet(6)}" ng-click="ctrl.setMenuTab(6)">Activities</a>
+                </div>
+                <!--</div>-->
+
+            </div>
+            <div>
+                <a class="newItem color-light-red" href data-toggle="modal" data-target="#eventModel" ng-show="ctrl.isMenuSet(1)">New Member</a>
+                <a class="newItem color-light-red" href data-toggle="modal" data-target="#eventModel" ng-show="ctrl.isMenuSet(2)">New Code</a>
+                <a class="newItem color-light-red" href data-toggle="modal" data-target="#eventModel" ng-show="ctrl.isMenuSet(3)">New User</a>
+                <a class="newItem color-light-red" href data-toggle="modal" data-target="#eventModel" ng-show="ctrl.isMenuSet(4)">New Event</a>
+                <a class="newItem color-light-red" href data-toggle="modal" data-target="#eventModel" ng-show="ctrl.isMenuSet(5)">New News</a>
+                <a class="newItem color-light-red" href data-toggle="modal" data-target="#eventModel" ng-show="ctrl.isMenuSet(6)">New Activity</a>
+            </div>
+        </div><!-- Sidebar menu-->
+
+        <report-members ng-show="ctrl.isMenuSet(1)"></report-members>
+        <report-codes ng-show="ctrl.isMenuSet(2)"></report-codes>
+        <report-users ng-show="ctrl.isMenuSet(3)"></report-users>
+        <report-events ng-show="ctrl.isMenuSet(4)"></report-events>
+        <report-news ng-show="ctrl.isMenuSet(5)"></report-news>
+        <report-activities  ng-show="ctrl.isMenuSet(6)"></report-activities>
+
+
+    </div> <!-- /row -->
+</div> <!-- /container -->

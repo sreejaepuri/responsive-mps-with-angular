@@ -25,8 +25,8 @@
             .when("/event", {
                 templateUrl: "html/event.html"
             })
-            .when("/report-events", {
-                templateUrl: "html/report-events.html"
+            .when("/reports", {
+                templateUrl: "html/reports.html"
             })
             .otherwise({
                 redirectTo: "/index.html"
@@ -79,8 +79,9 @@
         };
     });
 
-    app.controller("eventsController", function ($scope) {
-        this.tab = 1;
+    app.controller("reportController", function ($scope) {
+        this.tab = 1;           //for search Tabs
+        this.menu_tab = 1;      // For menu tabs
 
         this.isSet = function (checkTab) {
             return (this.tab === checkTab);
@@ -88,6 +89,16 @@
 
         this.setTab = function (setTab) {
             this.tab = setTab;
+        };
+
+        this.isMenuSet = function (checkTab) {
+            console.log("Menu " + checkTab + " is selected");
+            return (this.menu_tab === checkTab);
+        };
+
+        this.setMenuTab = function (setTab) {
+            console.log("Menu " + setTab + " is Set");
+            this.menu_tab = setTab;
         };
 
         $scope.myDate = new Date();
@@ -145,5 +156,49 @@
         }
     });
 
+    // Report directives
+    app.directive("reportMembers", function () {
+        return {
+            restrict: 'E',
+            templateUrl: "html/report/members.html"
+        };
+    });
+
+    app.directive("reportCodes", function () {
+        return {
+            restrict: 'E',
+            templateUrl: "html/report/codes.html"
+        };
+    });
+
+    app.directive("reportUsers", function () {
+        return {
+            restrict: 'E',
+            templateUrl: "html/report/users.html"
+        };
+    });
+
+    app.directive("reportEvents", function () {
+        return {
+            restrict: 'E',
+            templateUrl: "html/report/events.html"
+        };
+    });
+
+    app.directive("reportNews", function () {
+        return {
+            restrict: 'E',
+            templateUrl: "html/report/news.html"
+        };
+    });
+
+    app.directive("reportActivities", function () {
+        return {
+            restrict: 'E',
+            templateUrl: "html/report/activities.html"
+        };
+    });
+    // End of Report Directives
+    
 })();
 
