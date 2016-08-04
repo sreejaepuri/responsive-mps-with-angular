@@ -74,7 +74,6 @@
         };
 
         this.setTab = function (setTab) {
-            console.log("Tab clicked");
             this.tab = setTab;
         };
     });
@@ -92,12 +91,10 @@
         };
 
         this.isMenuSet = function (checkTab) {
-            console.log("Menu " + checkTab + " is selected");
             return (this.menu_tab === checkTab);
         };
 
         this.setMenuTab = function (setTab) {
-            console.log("Menu " + setTab + " is Set");
             this.menu_tab = setTab;
         };
 
@@ -145,13 +142,11 @@
         this.upload = function(){
             var files = (document.querySelector('#fileInput')).files;
             if(files[0] != null && files.length > 0){
-                console.log(files[0]);
                 $scope.event.images.push(files[0].name);
             }
         };
 
         this.remove = function(imageName){
-            console.log(imageName);
             $scope.event.images.pop(imageName);
         }
     });

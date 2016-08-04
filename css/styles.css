@@ -82,6 +82,10 @@ li.register a:hover, .navbar-default .navbar-nav>li>a:hover{
 
 }
 
+.label-header{
+    display:block;
+    padding: 5px 0;
+}
 
 /*Home page*/
 .carousel {
@@ -213,7 +217,7 @@ a.list-group-item.active, a.list-group-item.active:focus, a.list-group-item.acti
     color:#ffffff;
     text-align:center;
     display:block;
-    margin-top:20px !important;
+    margin:20px 0;
     border-radius:5px;
 }
 
