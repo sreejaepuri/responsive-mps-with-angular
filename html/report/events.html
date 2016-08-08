@@ -1,54 +1,34 @@
 <div class="inner-page col-md-9">
-    <ul class="nav nav-pills nav-justified panel-blue-heading">
-        <li role="presentation" ng-class="{active:ctrl.isSet(1)}"><a href ng-click="ctrl.setTab(1)">by E Text</a>
-        </li>
-        <li role="presentation" ng-class="{active:ctrl.isSet(2)}"><a href ng-click="ctrl.setTab(2)">by E Date</a>
-        </li>
-    </ul>
 
-    <!--Search by Text-->
-    <div class="panel panel-default" ng-show="ctrl.isSet(1)">
-        <div class="panel-body">
-            <form>
-                <md-input-container class="md-block" flex-gt-sm>
-                    <section class="pad-bottom-30">
-                        <label>Full or part of the event title</label>
-                        <input ng-model="event.searchText">
-                    </section>
-                    <section>
-                        <div flex-xs class="pad-top-30">
-                            <!--<md-switch ng-model="event.searchExact">Search {{event.searchExact ? "Exact" : "part of the"}} text</md-switch>-->
-                            <md-checkbox ng-model="event.searchExact" aria-label="Checkbox 1">
-                                Search {{event.searchExact ? "Exact" : "part of the"}} text
-                            </md-checkbox>
-                        </div>
-                    </section>
-                    <!--<button type="submit" class="btn btn-block">Clear</button>-->
-                    <button type="submit" class="btn btn-block btn-primary">Search</button>
-                </md-input-container>
-            </form>
+    <div class="panel panel-default">
+        <div class="panel-heading panel-blue-heading">
+            <h3 class="panel-title">Event Search</h3>
         </div>
-    </div><!--Search by Text-->
-
-    <!--Search by Dates-->
-    <div class="panel panel-default" ng-show="ctrl.isSet(2)">
         <div class="panel-body">
-            <form name="myForm">
-                <div class="form-group">
-                    <md-datepicker id="eventFromDate" ng-model="eventFromDate" md-placeholder="Enter from date"
-                                   md-min-date="minDate" md-max-date="maxDate"></md-datepicker>
+            <div class="form-group">
+                <label for="searchTitle">Event Title:</label>
+                <input type="text" class="form-control" id="searchTitle" placeholder="Full or part of the event title">
+            </div>
+            <div class="form-group checkbox">
+                <label for="fulText">
+                    <input type="checkbox" id="fulText"> Full text
+                </label>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="eventSFrom">From Date:</label>
+                    <input type="text" class="form-control" id="eventSFrom" placeholder="From Date">
                 </div>
 
-                <div class="form-group">
-                    <md-datepicker id="eventToDate" ng-model="eventToDate" md-placeholder="Enter to date"
-                                   md-min-date="minDate" md-max-date="maxDate"></md-datepicker>
+                <div class="form-group col-md-6">
+                    <label for="eventSTo">To Date:</label>
+                    <input type="text" class="form-control" id="eventSTo" placeholder="To Date">
                 </div>
-
-                <button type="submit" class="btn btn-block btn-primary">Search Event</button>
-            </form>
-
+            </div>
+            <button type="submit" class="btn btn-block btn-primary">Search</button>
         </div>
-    </div><!--Search by Dates-->
+    </div>
 
     <!--Results set-->
     <div id="events-list" layout="column" flex layout-fill ng-cloak class="pad-bottom-10">
@@ -154,3 +134,17 @@
         </div>
     </div>
 </div>
+
+<script>
+    $( function() {
+        $( "#eventSFrom" ).datepicker({
+            changeMonth: true,
+            changeYear: true
+        });
+
+        $( "#eventSTo" ).datepicker({
+            changeMonth: true,
+            changeYear: true
+        });
+    } );
+</script>
