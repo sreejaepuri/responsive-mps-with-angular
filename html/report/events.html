@@ -11,7 +11,7 @@
             </div>
             <div class="form-group checkbox">
                 <label for="fulText">
-                    <input type="checkbox" id="fulText"> Full text
+                    <input type="checkbox" id="fulText" ng-model="event.searchExact">Search {{event.searchExact ? "Exact" : "part of the"}} text
                 </label>
             </div>
 
@@ -53,6 +53,7 @@
             </section>
         </md-content>
     </div><!--Results set-->
+
 </div><!-- /. col-md-8 -->
 
 <!--New event form-->
@@ -65,65 +66,58 @@
             </div>
             <div class="modal-body">
                 <form name="eventForm" onsubmit="">
-                    <div layout-gt-md="row" class="md-block">
-                        <md-datepicker ng-model="event.date" md-placeholder="Event date" md-min-date="minDate" md-max-date="maxDate" class="pad-top-6"></md-datepicker>
-                        <md-input-container flex>
-                            <label>Time</label>
-                            <md-select ng-model="event.time">
-                                <md-option ng-repeat="section in sectionOfTheDay" value="{{section}}">
-                                    {{section}}
-                                </md-option>
-                            </md-select>
-                        </md-input-container>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="eventDate">Date:</label>
+                            <input type="text" class="form-control" id="eventDate">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="eventTime">Time:</label>
+                            <select id="eventTime" class="form-control">
+                                <option value="1">Morning</option>
+                                <option value="2">Day</option>
+                                <option value="3">Evening</option>
+                                <option value="4">Afternoon</option>
+                            </select>
+                        </div>
                     </div>
-
-                    <md-input-container class="md-block">
-                        <label>Title</label>
-                        <input ng-model="event.title">
-                    </md-input-container>
-                    <div layout-gt-sm="row">
-                        <md-input-container class="md-block" flex-gt-sm="">
-                            <label>First name</label>
-                            <input ng-model="event.firstName">
-                        </md-input-container>
-
-                        <md-input-container class="md-block" flex-gt-sm="">
-                            <label>Last Name</label>
-                            <input ng-model="event.lastName">
-                        </md-input-container>
+                    <div class="form-group">
+                        <label for="title">Title:</label>
+                        <input type="text" class="form-control" id="title" placeholder="Full Name">
                     </div>
-                    <div layout-gt-sm="row">
-                        <md-input-container class="md-block" flex-gt-sm="">
-                            <label>Event Code</label>
-                            <input name="eventCode" ng-model="event.code" placeholder="12345" required="" ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
-
-                            <div ng-messages="eventForm.eventCode.$error" role="alert" multiple="">
-                                <div ng-message="required" class="my-message">You must supply a event code.</div>
-                                <div ng-message="pattern" class="my-message">That doesn't look like a valid event code.</div>
-                                <div ng-message="md-maxlength" class="my-message">Don't use the long version silly...we don't need to be that specific...</div>
-                            </div>
-                        </md-input-container>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="firstName">First Name:</label>
+                            <input type="text" class="form-control" id="firstName">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" class="form-control" id="lastName">
+                        </div>
                     </div>
-                    <md-input-container class="md-block">
-                        <label>Description</label>
-                        <textarea ng-model="event.description" md-maxlength="150" rows="5" md-select-on-focus=""></textarea>
-                    </md-input-container>
-
-
-                    <input id="fileInput" class="btn btn-default" type="file" ng-model="event.uploadImage">
-
-                    <md-button class="md-raised" ng-click="ctrl.upload()" aria-label="Upload">
-                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                    </md-button>
-
-                </form>
-                <section>
+                    <div class="form-group">
+                        <label for="eventCode">Event Code:</label>
+                        <input type="text" class="form-control" id="eventCode">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <textarea class="form-control" rows="2" id="description"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-11">
+                            <input id="fileInput" class="btn btn-default btn-group-justified" type="file" ng-model="event.uploadImage">
+                        </div>
+                        <div class="form-group col-md-1">
+                            <a ng-click="ctrl.upload()" href><span class="glyphicon glyphicon-plus pad-top-10"></span></a>
+                        </div>
+                    </div>
                     <ul class="list-group">
-                        <li class="list-group-item" ng-repeat="img in event.images">{{img}} <a ng-click="ctrl.remove('ddddd')" class="pull-right"><span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span></a></li>
-
+                        <li class="list-group-item" ng-repeat="img in event.images">{{img}}
+                            <a ng-click="ctrl.remove('ddddd')" class="pull-right" href><span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span></a>
+                        </li>
                     </ul>
-                </section>
                 </form>
+
             </div>
             <div class="modal-footer">
                 <md-button class="md-raised" data-dismiss="modal">Close</md-button>
@@ -143,6 +137,10 @@
         });
 
         $( "#eventSTo" ).datepicker({
+            changeMonth: true,
+            changeYear: true
+        });
+        $( "#eventDate" ).datepicker({
             changeMonth: true,
             changeYear: true
         });

@@ -13,26 +13,6 @@
         </div>
     </div>
 
-    <!--Search by Dates-->
-    <div class="panel panel-default" ng-show="ctrl.isSet(2)">
-        <div class="panel-body">
-            <form name="myForm">
-                <div class="form-group">
-                    <md-datepicker id="eventFromDate" ng-model="eventFromDate" md-placeholder="Enter from date"
-                                   md-min-date="minDate" md-max-date="maxDate"></md-datepicker>
-                </div>
-
-                <div class="form-group">
-                    <md-datepicker id="eventToDate" ng-model="eventToDate" md-placeholder="Enter to date"
-                                   md-min-date="minDate" md-max-date="maxDate"></md-datepicker>
-                </div>
-
-                <button type="submit" class="btn btn-block btn-primary">Search Event</button>
-            </form>
-
-        </div>
-    </div><!--Search by Dates-->
-
     <!--Results set-->
     <div id="events-list" layout="column" flex layout-fill ng-cloak class="pad-bottom-10">
         <md-content md-theme="altTheme" style="max-height: 600px;">
