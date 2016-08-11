@@ -1,0 +1,97 @@
+<div class="inner-page col-md-9">
+
+    <!--Search Form-->
+    <div class="panel panel-default">
+        <div class="panel-heading panel-blue-heading">
+            <h3 class="panel-title">User Search</h3>
+        </div>
+        <div class="panel-body">
+            <div class="form-group col-md-12">
+                <label for="userSName">User Name:</label>
+                <input type="text" class="form-control" id="userSName" placeholder="User Name">
+            </div>
+            <div class="form-group col-md-12">
+                <label for="userSEmail">Email:</label>
+                <input type="email" class="form-control" id="userSEmail" placeholder="User Email address">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="contactSNumber">Contact Number:</label>
+                <input type="text" class="form-control" id="contactSNumber" placeholder="Contact Number">
+            </div>
+            <button type="submit" class="btn btn-block btn-primary">Search</button>
+        </div>
+    </div>
+
+    <!--Results set-->
+    <div id="events-list" layout="column" flex layout-fill ng-cloak class="pad-bottom-10">
+        <md-content md-theme="altTheme" style="max-height: 600px;">
+            <section ng-repeat="ev in eventsList">
+                <md-subheader class="md-primary">{{ev.date}}</md-subheader>
+                <md-list layout-padding>
+                    <md-list-item class="md-3-line">
+                        <img ng-src="img/thumbnail/birdy3_0.jpg" class="thumbnail" >
+
+                        <div class="md-list-item-text">
+                            <h4>{{ev.title}} posted by  XXXXX<a href="#"><span class="glyphicon glyphicon-remove pull-right" aria-hidden="true" title="Delete"></span></a><a href="#"><span class="glyphicon glyphicon-edit pull-right" aria-hidden="true" title="Edit"></span></a></h4>
+
+                            <p>
+                                {{ev.description}}
+                            </p>
+                            <a class="readmore" href="#">Read More</a>
+                        </div>
+                    </md-list-item>
+                </md-list>
+                <!--<hr>-->
+            </section>
+        </md-content>
+    </div><!--Results set-->
+</div><!-- /. col-md-8 -->
+
+<!--New Member form-->
+<div class="modal fade" id="userModel" tabindex="-1" role="dialog" aria-labelledby="memberModelLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header panel-blue-heading">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">Member Details</h4>
+            </div>
+            <div class="modal-body">
+                <form name="memberForm" onsubmit="">
+                    <div class="form-group">
+                        <label for="userName">User Name:</label>
+                        <input type="text" class="form-control" id="userName" placeholder="User Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactNumber">Contact Number:</label>
+                        <input type="text" class="form-control" id="contactNumber" placeholder="Contact Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="userPhoto">Photo:</label>
+                        <input id="userPhoto" class="btn btn-default btn-group-justified" type="file" ng-model="user.uploadImage">
+                    </div>
+                    <div class="form-group">
+                        <label for="userEmail">Email:</label>
+                        <input type="text" class="form-control" id="userEmail" placeholder="User email address">
+                    </div>
+                    <div class="form-group">
+                        <label for="emailConfirm">Contact Number:</label>
+                        <input type="email" class="form-control" id="emailConfirm" placeholder="Contact Number">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-lg" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary btn-lg">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $( function() {
+        $( "#dob" ).datepicker({
+            changeMonth: true,
+            changeYear: true
+        });
+    } );
+</script>

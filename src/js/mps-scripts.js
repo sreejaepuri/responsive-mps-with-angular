@@ -5,5 +5,5 @@ $(document).ready(function() {
     $('[data-toggle="tooltip"]').tooltip();
     $('#tooltip_1').tooltip('hide');
     $('#tooltip_2').tooltip('hide');
-    $('[data-toggle="popover"]').popover()
+    $('[data-toggle="popover"]').popover();
 });

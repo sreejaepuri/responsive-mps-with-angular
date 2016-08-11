@@ -8,7 +8,7 @@ This codes were implemented following a [Shaping up with AngularJs](https://www.
   *  Custom Directives
   *  Services
 
-## Contents :
+## Contents : Need to be updated
 ```
   root_folder
   │   .gitignore

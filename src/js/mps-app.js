@@ -141,14 +141,14 @@
 
         this.upload = function(){
             var files = (document.querySelector('#fileInput')).files;
-            if(files[0] != null && files.length > 0){
+            if(files[0] !== null && files.length > 0){
                 $scope.event.images.push(files[0].name);
             }
         };
 
         this.remove = function(imageName){
             $scope.event.images.pop(imageName);
-        }
+        };
     });
 
     // Report directives

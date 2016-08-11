@@ -1,0 +1,135 @@
+<div class="container" ng-controller="aboutController as tab">
+    <div class="row pad-top-30">
+        <!--Left contents-->
+        <div class="inner-page col-md-8">
+            <div id="about" class="well">
+                <h3>About Us</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tellus lacus, ullamcorper et scelerisque eleifend, porttitor consectetur risus. Duis consequat tortor quam, nec auctor magna lobortis quis. Vestibulum tincidunt volutpat nisi, vel sodales est vestibulum in. Maecenas porttitor, tellus sit amet ullamcorper mollis, arcu est dignissim odio, quis fringilla mauris lacus sit amet sapien. In posuere ac erat non sollicitudin. Maecenas ante nibh, imperdiet a nisl quis, semper rhoncus nisl. Phasellus porta adipiscing risus, sed pellentesque elit eleifend sed. Fusce scelerisque cursus sapien. Nullam feugiat sollicitudin diam, id tincidunt sem eleifend at. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In aliquet scelerisque lectus nec imperdiet.</p>
+                <!--<hr>-->
+                <!--<h3>Teamwork</h3>-->
+                <!--<img src="img/sample/teamwork.jpg" alt="Teamwork" />-->
+            </div>
+
+
+
+            <!--Member details section-->
+            <ul class="nav nav-pills nav-justified">
+                <li ng-class="{active:tab.isSet(1)}"><a href ng-click="tab.setTab(1)">House 01 members <span class="badge">3</span></a></li>
+                <li ng-class="{active:tab.isSet(2)}"><a href ng-click="tab.setTab(2)">House 02 member <span class="badge">1</span></a></li>
+            </ul>
+
+            <!--Tab 01-->
+            <div class="panel" ng-show="tab.isSet(1)">
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="aim">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object img-circle" src="img/thumbnail/IMG_0035.JPG" alt="user 01">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">User Name</h4>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object img-circle" src="img/thumbnail/IMG_0038.JPG" alt="user 01">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">User Name</h4>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object img-circle" src="img/thumbnail/IMG_0072.JPG" alt="user 01">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">User Name</h4>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Tab 02-->
+            <div class="panel" ng-show="tab.isSet(2)">
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="aim">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object img-circle" src="img/thumbnail/birdy3_0.jpg" alt="user 01">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">User Name</h4>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Sidebar -->
+        <div class="col-md-4">
+            <!--Mgr Members description-->
+            <div class="panel panel-default">
+                <div class="panel-heading panel-blue-heading">
+                    <h3 class="panel-title">Admin team</h3>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-12">
+                        <div class="thumbnail">
+                            <img src="img/thumbnail/IMG_0002_0.JPG" alt="Image one">
+                            <div class="caption">
+                                <h4>Adrian Samaranayaka</h4>
+                                <p>But I mustou a complete account of the system<a id="tooltip-5" data-toggle="tooltip" title="Some tooltip text!">...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col-sm-6 col-md-12">
+                        <div class="thumbnail">
+                            <img src="img/thumbnail/IMG_0035.JPG" alt="Image one" >
+                            <div class="caption">
+                                <h3>Adrian Samaranayaka</h3>
+                                <p>But I mustou a complete account of the system<a id="tooltip-5" data-toggle="tooltip" title="Some tooltip text!">...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--&lt;!&ndash; /. col-md-8 &ndash;&gt;-->
+
+            <div class="well">
+                <h3>Quick Contact</h3>
+                <form role="form">
+                    <div class="form-group">
+                        <label for="exampleInputName">Name</label>
+                        <input type="email" class="form-control" id="exampleInputName" placeholder="Enter full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputMessage">Message</label>
+                        <textarea class="form-control" rows="3" id="exampleInputMessage"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-default">Send</button>
+                </form>
+            </div>
+
+        </div><!-- /. col-md-4 -->
+    </div> <!-- /row -->
+</div> <!-- /container -->
