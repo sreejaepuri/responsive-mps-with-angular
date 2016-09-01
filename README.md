@@ -7,75 +7,86 @@ This codes were implemented following a [Shaping up with AngularJs](https://www.
   *  Forms
   *  Custom Directives
   *  Services
-
-## Contents : Need to be updated
+## Twitter Bootstrap topics of
+  * Components
+  * Layouts
+  * CSS3 features
+  * JavaScript functionality with use of JQuery
+  
+## Contents : Continue on changing...
 ```
   root_folder
+  C:.
   │   .gitignore
-  │   about-us.html
-  │   contact-us.html
-  │   event.html
-  │   events.html
-  │   GemStore.html
+  │   bower.json
+  │   gulpfile.js
   │   index.html
   │   package.json
   │   README.md
-  │   store.json
   │
-  ├───css
-  │       banner.css
-  │       styles.css
-  │
-  ├───html
-  │       product-description.html
-  │       product-gallery.html
-  │       product-reviews.html
-  │       product-specs.html
-  │       product-tabs.html
-  │       product-title.html
-  │       slider-bar.html
-  │
-  ├───img
-  │   │   birdy3_0.jpg
-  │   │   boy-1.png
-  │   │   boy-2.png
-  │   │   ...
-  │   │   man-1.png
-  │   │   man.png
-  │   │
-  │   ├───banner
-  │   │       bn-1.jpg
-  │   │       bn-2.JPG
-  │   │       bn-3.JPG
-  │   │       bn-4.JPG
-  │   │
-  │   ├───sample
-  │   │       blog1.jpg
-  │   │       blog2.jpg
-  │   │       ...
-  │   │       waterdrop.jpg
-  │   │       waterdrop400.jpg
-  │   │
-  │   └───small
-  │           assistant.png
-  │           astronaut.png
-  │           ...
-  │           farmer.png
-  │           firefighter.png
-  │
-  ├───js
-  │       angular.js
-  │       app.js
-  │       banner.js
-  │       bootstrap.css
-  │       jquery-2.2.4.min.js
-  │       product-directives.js  
-  │       products.js
-  │       store-products.js
-  │
-  └───node_modules
+  └───src
+      │   documentation.html
+      │   favicon.png
+      │
+      ├───css
+      │       styles.css
+      │
+      ├───html
+      │   │   about-us.html
+      │   │   contact-us.html
+      │   │   event.html
+      │   │   events.html
+      │   │   mps-home.html
+      │   │   navigation-menu.html
+      │   │   reports.html
+      │   │
+      │   └───report
+      │           activities.html
+      │           codes.html
+      │           events.html
+      │           members.html
+      │           news.html
+      │           users.html
+      │
+      ├───img
+      │   │   birdy3_0.jpg
+      │   │   boy-1.png
+      │   │   ...
+      │   │   man-1.png
+      │   │   man.png
+      │   │
+      │   ├───banner
+      │   │       bn-1.JPG
+      │   │       bn-2.JPG
+      │   │       bn-3.JPG
+      │   │       bn-4.JPG
+      │   │
+      │   ├───small
+      │   │       assistant.png
+      │   │       assistant.svg
+      │   │       ...
+      │   │       miner.svg
+      │   │       motorcyclist.svg
+      │   │
+      │   ├───svg
+      │   │       badoo.svg
+      │   │       bebo.svg
+      │   │       ...
+      │   │       xing.svg
+      │   │       youtube.svg
+      │   │
+      │   └───thumbnail
+      │           birdy3_0.jpg
+      │           ...
+      │           IMG_0065.JPG
+      │           IMG_0072.JPG
+      │
+      └───js
+              mps-app.js
+              mps-scripts.js
 ```
 
 ## Contents Description 
 > * GemStore.html : root file for Angular JS functionality.
 > * index.html : root for bootstrap exercises.
+ 
