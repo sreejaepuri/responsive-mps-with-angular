@@ -7,6 +7,7 @@ This codes were implemented following a [Shaping up with AngularJs](https://www.
   *  Forms
   *  Custom Directives
   *  Services
+  
 ## Twitter Bootstrap topics of
   * Components
   * Layouts
