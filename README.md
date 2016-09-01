@@ -16,7 +16,6 @@ This codes were implemented following a [Shaping up with AngularJs](https://www.
 ## Contents : Continue on changing...
 ```
   root_folder
-  C:.
   │   .gitignore
   │   bower.json
   │   gulpfile.js
